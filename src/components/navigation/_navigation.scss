@@ -1,0 +1,88 @@
+.main--nav {
+    height: 100%;
+    width: 15rem;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 5;
+    position: relative;
+}
+
+.nav--line {
+    position: absolute;
+    height: 100%;
+    width: 1rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: .2rem dotted $lightColor;
+}
+
+.nav--logo {
+    width: 100%;
+    height: 6rem;
+    padding: 2rem 0 0 2rem;
+
+    a {
+        font-family: 'Shrikhand', cursive;
+        font-weight: bold;
+        color: $lightColor;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+}
+
+.nav--menu {
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    li {
+        transition: .1s;
+        margin: 2rem auto 0 1rem;
+        padding-left: 2rem;
+        width: 100%;
+        height: 4rem;
+        overflow: hidden;
+    }
+}
+
+.menu--link {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:hover .fa {
+        transform: translateY(-4rem);
+    }
+
+    &:hover span {
+        transform: translateY(0);
+    }
+
+    .fa {
+        color: $mainColor;
+        font-size: 3rem;
+        transition: .2s;
+    }
+
+    span {
+        color: $mainColor;
+        transform: translateY(5rem);
+        font-size: 2rem;
+        left: -1rem;
+        line-height: 2.5rem;
+        position: absolute;
+        transition: .2s;
+    }
+}
