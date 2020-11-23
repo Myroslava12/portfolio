@@ -20,7 +20,7 @@
     "three": "^0.122.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve build",
     "dev": "react-scripts start",
     "heroku-postbuild": "npm run build",
     "build": "react-scripts build",
@@ -41,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.1.2"
   }
 }
