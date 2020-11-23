@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Canvas,  useFrame, useThree } from 'react-three-fiber';
 import {MeshWobbleMaterial, OrbitControls} from "drei";
 import Navigation from "../navigation/Navigation";
@@ -27,7 +27,7 @@ const Box = ({i, color}) => {
 }
 
 const Home = () => {
-
+    const [isLoaded, setIsLoaded] = useState(false);
     return (
         <div className="canvas--box">
             <Navigation />
