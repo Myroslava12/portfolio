@@ -4,6 +4,9 @@
 @import "./scss/home";
 @import "./header/header";
 @import "./about/aboutMe";
+@import "./cursor/cursor";
+@import "./skills/skills";
+@import "aos/dist/aos.css";
 
 
 html {
@@ -12,9 +15,7 @@ html {
 
 body {
     width: 100%;
-    height: 100%;
     background-color: black;
-    position: fixed;
 }
 
 .app--container {

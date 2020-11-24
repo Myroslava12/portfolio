@@ -3,6 +3,8 @@ import { Canvas,  useFrame, useThree } from 'react-three-fiber';
 import {MeshWobbleMaterial, OrbitControls} from "drei";
 import Navigation from "../navigation/Navigation";
 import Header from "../header/Header";
+import Cursor from "../cursor/Cursor";
+import AboutMe from "../about/AboutMe";
 
 const Box = ({i, color}) => {
     const mesh = useRef(null);
@@ -27,23 +29,27 @@ const Box = ({i, color}) => {
 }
 
 const Home = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
+
     return (
-        <div className="canvas--box">
-            <Navigation />
-            <Canvas className="canvas" camera={{fov: 50,  position: [0, 0, 30] }}>
-                <directionalLight color="#ffffff" intensity={.8} position={[-1, 2, 4]} />
-                <pointLight position={[-10, 0, 0]} intensity={0.1} />
-                {new Array(500).fill().map((el, i) => {
-                    return <Box 
-                        i={i}
-                        color="#3d6355"
-                        args={[.6, .6, .6]}
-                    />
-                })}
-                <OrbitControls />
-            </Canvas>
-            <Header />
+        <div className="main--app">
+            <div className="canvas--box" id="home">
+                <Navigation />
+                <Canvas className="canvas" camera={{fov: 50,  position: [0, 0, 30] }}>
+                    <directionalLight color="#ffffff" intensity={.8} position={[-1, 2, 4]} />
+                    <pointLight position={[-10, 0, 0]} intensity={0.1} />
+                    {new Array(500).fill().map((el, i) => {
+                        return <Box 
+                            key={i}
+                            i={i}
+                            color="#3d6355"
+                            args={[.6, .6, .6]}
+                        />
+                    })}
+                    {/* <OrbitControls /> */}
+                </Canvas>
+                <Header />
+            </div>
+            <AboutMe />
         </div>
     )
 }

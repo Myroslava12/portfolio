@@ -1,42 +1,90 @@
-import React from "react";
+import React, { useState } from "react";
 import {NavLink} from "react-router-dom";
 import {Link} from "react-scroll";
+import cx from "classnames";
 
 const Navigation = () => {
+    const [move, setMove] = useState(false);
+    const onMouseMove = () => setMove(true);
+
+    const onMouseOut = () => setMove(false);
+
     return (
         <nav className="main--nav">
                 <div className="nav--logo">
-                    <a href="#">mi.skala</a>
+                    <a
+                        className={cx({"text--hovered": move })} 
+                        href="/"
+                        onMouseMove={onMouseMove} 
+                        onMouseOut={onMouseOut} 
+                    >
+                        mi.skala
+                    </a>
                 </div>
                 <ul className="nav--menu">
                     <li>
-                        <NavLink to="/" className="menu--link">
+                        <Link 
+                            onMouseMove={onMouseMove} 
+                            onMouseOut={onMouseOut} 
+                            to="home"
+                            smooth={true}
+                            duration={500}
+                            className="menu--link"
+                        >
                             <i className="fa fa-home"></i>
-                            <span>Home</span>
-                        </NavLink>
+                            <span className={cx( {"text--hovered": move })}>Home</span>
+                        </Link>
                     </li>
                     <li>
-                        <NavLink to="/about" className="menu--link">
+                        <Link 
+                            onMouseMove={onMouseMove} 
+                            onMouseOut={onMouseOut}
+                            to="about"
+                            smooth={true}
+                            duration={400}
+                            className="menu--link"
+                        >
                             <i className="fa fa-user"></i>
-                            <span>About</span>
-                        </NavLink>
+                            <span className={cx({"text--hovered": move })}>About</span>
+                        </Link>
                     </li>
                     <li>
-                        <Link href="#" className="menu--link">
+                        <Link 
+                            onMouseMove={onMouseMove} 
+                            onMouseOut={onMouseOut}
+                            to="skills" 
+                            smooth={true}
+                            duration={400}
+                            className="menu--link"
+                        >
                             <i className="fa fa-code"></i>
-                            <span>Technologies</span>
+                            <span className={cx({"text--hovered": move })}>Skills</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="#" className="menu--link">
+                        <Link 
+                            to="projects"
+                            smooth={true}
+                            duration={500} 
+                            className="menu--link"
+                            onMouseMove={onMouseMove} 
+                            onMouseOut={onMouseOut} 
+                        >
                             <i className="fa fa-folder-open"></i>
-                            <span>Projects</span>
+                            <span className={cx({"text--hovered": move })}>Projects</span>
                         </Link>
                     </li>
                     <li>
-                        <Link href="#" className="menu--link">
+                        <Link 
+                            to="contact"
+                            smooth={true}
+                            duration={600} 
+                            className="menu--link"
+                            onMouseMove={onMouseMove} 
+                            onMouseOut={onMouseOut} 
+                        >
                             <i className="fa fa-envelope"></i>
-                            <span>Contact</span>
+                            <span className={cx({"text--hovered": move })}>Contact</span>
                         </Link>
                     </li>
                 </ul>

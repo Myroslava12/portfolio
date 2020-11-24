@@ -1,0 +1,96 @@
+.skills--box {
+    width: calc(100% - 15rem);
+    height: 80rem;
+    margin: 4rem 0 2rem auto;
+    position: relative;
+}
+
+.skills--img {
+    display: block;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-40%);
+    bottom: 0;
+    width: 60%;
+}
+
+.skills--icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    position: absolute;
+    padding: 1.5rem;
+    background-color: $mainColor;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fab {
+        font-size: 3.5rem;
+    }
+}
+
+.icon--html {
+    bottom: 10%;
+    left: 13%;
+    background-color: orange;
+}
+
+.icon--css {
+    bottom: 25%;
+    left: 16%;
+    background-color: rgb(51, 157, 192);
+}
+
+.icon--js {
+    bottom: 40%;
+    left: 21%;
+    background-color:rgb(218, 218, 16);
+}
+
+.icon--sass {
+    bottom: 55%;
+    left: 29%;
+    background-color:rgb(197, 96, 113);
+}
+
+.icon--react {
+    bottom: 60%;
+    left: 42%;
+    background-color: rgb(76, 145, 190);
+}
+
+.icon--firebase {
+    bottom: 55%;
+    left: 55%;
+    background-color: rgb(202, 202, 92);
+}
+
+.icon--api {
+    bottom: 40%;
+    left: 63%;
+    background-color: rgb(156, 197, 211);
+
+    img {
+        display: block;
+        width: 90%;
+    }
+}
+
+.icon--git {
+    bottom: 25%;
+    left: 68%;
+    background-color: rgb(214, 93, 13);
+}
+
+.icon--figma {
+    bottom: 10%;
+    left: 71%;
+    background-color: rgb(158, 60, 158);
+}
+
+@keyframes icon {
+    to {
+        opacity: 1;
+    }
+}
