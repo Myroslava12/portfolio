@@ -2,12 +2,12 @@ import React from "react";
 import Navigation from "../navigation/Navigation";
 import picture from "../images/my-picture.png";
 import Skills from "../skills/Skills";
-import cv from "../images/Myroslava Skala.pdf"
+import cv from "../images/Myroslava Skala.pdf";
+import Cursor from "../cursor/Cursor";
 
 const AboutMe = () => {
     return (
         <section className="section--about" id="about">
-        <div className="section--bg"></div>
             <div className="app--container">
                 <div className="about--info">
                     <h2 className="about--title">About me</h2>
@@ -25,7 +25,6 @@ const AboutMe = () => {
                     <img className="my--picture" src={picture} alt="my-picture" />
                 </div>
             </div>
-            <Skills />
         </section>
     )
 }

@@ -7,11 +7,16 @@
 @import "./cursor/cursor";
 @import "./skills/skills";
 @import "aos/dist/aos.css";
+@import "./projects/projects";
 
 
 html {
     font-size: 10px;
 }
+
+// html, body {
+//     cursor: none;
+// }
 
 body {
     width: 100%;
@@ -19,13 +24,13 @@ body {
 }
 
 .app--container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1650px) {
     .app--container {
-        width: auto;
-        padding: 0 2.5rem;
+        width: 100%;
+        padding-right: 2.5rem;
     }
 }

@@ -1,0 +1,311 @@
+.projects--section {
+    width: 100%;
+    padding: 3rem 0 3rem 15rem;
+    margin: 6rem 0 3rem 0;
+    display: block;
+    box-sizing: border-box;
+    font-family: 'Raleway', cursive;
+
+    .app--container {
+        height: 100%;
+        width: 100%;
+        
+    }
+}
+
+.projects--box {
+    width: auto;
+    height: 50rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.projects--info {
+    flex-basis: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.project--card {
+    width: 90%;
+    height: 75%;
+    position: absolute;
+    bottom: 5%;
+}
+
+.project--front, .project--back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform .6s;
+    border-radius: 2rem;
+}
+
+.project--card:hover > .project--front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.project--card:hover > .project--back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.project--back {
+    background-color: rgb(100, 94, 94);
+    transform: perspective(600px) rotateY(180deg);
+    padding: 1rem 3rem;
+    color: $lightColor;
+    box-sizing: border-box;
+}
+
+.project--card--title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    font-weight: 400;
+    font-family: 'Shrikhand', cursive;
+    margin: 2rem 0;
+}
+
+.project--card--text {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    margin-bottom: 0;
+    width: 80%;
+}
+
+.project--link--box {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10%;
+}
+
+.project--link {
+    color: $lightColor;
+    font-size: 1.6rem;
+    font-family: 'Raleway', cursive;
+    width: 12rem;
+
+    i {
+        margin-left: 1rem;
+    }
+}
+
+.project--front {
+    transform: perspective(600px) rotateY(0deg);
+    display: flex;
+    align-items: flex-end;
+}
+
+.foundation--img {
+    background-image: url(../images/foundation.png);
+}
+
+.classical--img {
+    background-image: url(../images/classical.png);
+}
+
+.project--img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: left bottom top right;
+}
+
+.projects--technologies {
+    position: relative;
+    box-sizing: border-box;
+    width: 60rem;
+}
+
+.projects--border {
+    position: absolute;
+    bottom: 5%;
+}
+
+.project--border--1, .project--border--2, .project--border--3 {
+    border-right: .3rem dotted $lightColor;
+    border-top: .3rem dotted $lightColor;
+}
+
+.project--border--4, .project--border--5, .project--border--6 {
+    border-left: .3rem dotted $lightColor;
+    border-top: .3rem dotted $lightColor;
+}
+
+.project--border--1 {
+    height: 7rem;
+    width: 5rem;
+    left: 30%;
+}
+
+.project--border--2 {
+    height: 15rem;
+    width: 12rem;
+    left: 21%;
+
+    &::before {
+        left: -1rem;
+    }
+}
+
+.project--border--2, .project--border--5 {
+
+    &::before {
+        position: absolute;
+        content: '';
+        height: 3rem;
+        width: 1rem;
+        border-right: .3rem dotted $lightColor;
+        top: -3.4rem;
+        right: 0;
+    }
+}
+
+.project--border--4, .project--border--3 {
+
+    &::before {
+        position: absolute;
+        content: '';
+        height: 6rem;
+        width: 1rem;
+        border-right: .3rem dotted $lightColor;
+        right: 0;
+        top: -6rem;
+    }
+}
+
+.project--border--3 {
+    height: 25rem;
+    width: 20rem;
+    left: 10%;
+
+    &::before {
+        left: -1rem;
+    }
+}
+
+.project--border--4 {
+    height: 25rem;
+    width: 20rem;
+    left: 46%;
+}
+
+.project--border--5 {
+    height: 15rem;
+    width: 12rem;
+    left: 49%;
+}
+
+.project--border--6 {
+    height: 7rem;
+    width: 5rem;
+    left: 52%;
+}
+
+.projects--title {
+    text-align: left;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: $lightColor;
+}
+
+.tech--box {
+    width: 12rem;
+    height: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    color: $lightColor;
+    background-color:rgb(100, 94, 94);
+    position: absolute;
+
+}
+
+.tech--box-1 {
+    left: 6.5rem;
+    top: 26rem;
+}
+
+.tech--box-2 {
+    right: 13rem;
+    top: 26rem;
+}
+
+.tech--box-3 {
+    left: 7rem;
+    bottom: 8rem;
+}
+
+.tech--box-4 {
+    right: 12.5rem;
+    bottom: 8rem;
+}
+
+.tech--box-5 {
+    left: 0rem;
+    top: 15rem;
+}
+
+.tech--box-6 {
+    right: 6.5rem;
+    top: 15rem;
+}
+
+
+@media (max-width: 1650px) {
+    .projects--box {
+        margin-right: 2.5rem;
+    }
+
+    .project--border--1 {
+        left: 18rem;
+    }
+    
+    .project--border--2 {
+        left: 12rem;
+    
+        &::before {
+            left: -1rem;
+        }
+    }
+
+    .project--border--3 {
+        left: 5rem;
+    }
+
+    .project--border--4 {
+        left: 26rem;
+    }
+    
+    .project--border--5 {
+        left: 27rem;
+    }
+    
+    .project--border--6 {
+        left: 28rem;
+    }
+
+    .tech--box-4 {
+        left: 32.3rem;
+    }
+    
+    .tech--box-6 {
+        left: 40rem;
+    }
+
+    .tech--box-2 {
+        left: 33rem;
+    }
+
+    .project--card--text {
+        width: 100%;
+    }
+
+    .project--link--box {
+        width: 60%;
+    }
+}

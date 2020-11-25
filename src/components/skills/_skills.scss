@@ -1,17 +1,17 @@
 .skills--box {
-    width: calc(100% - 15rem);
+    width: 100%;
     height: 80rem;
-    margin: 4rem 0 2rem auto;
+    padding: 3rem 0 3rem 15rem;
     position: relative;
 }
 
 .skills--img {
     display: block;
     position: absolute;
-    left: 40%;
-    transform: translateX(-40%);
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
-    width: 60%;
+    width: 90%;
 }
 
 .skills--icon {
@@ -19,7 +19,7 @@
     height: 4.5rem;
     position: absolute;
     padding: 1.5rem;
-    background-color: $mainColor;
+    background-color: $lightColor;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -30,46 +30,56 @@
     }
 }
 
+.skills--img--box {
+    position: absolute;
+    width: 55%;
+    height: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    // margin: 0 auto 2rem 12%;
+    bottom: 0;
+}
+
 .icon--html {
-    bottom: 10%;
-    left: 13%;
-    background-color: orange;
+    bottom: 12%;
+    left: 3%;
+    color: orange;
 }
 
 .icon--css {
-    bottom: 25%;
-    left: 16%;
-    background-color: rgb(51, 157, 192);
+    bottom: 30%;
+    left: 9%;
+    color: rgb(51, 157, 192);
 }
 
 .icon--js {
-    bottom: 40%;
-    left: 21%;
-    background-color:rgb(218, 218, 16);
+    bottom: 48%;
+    left: 16%;
+    color:rgba(214, 214, 7, 0.884);
 }
 
 .icon--sass {
-    bottom: 55%;
-    left: 29%;
-    background-color:rgb(197, 96, 113);
+    bottom: 66%;
+    left: 26%;
+    color:rgb(197, 96, 113);
 }
 
 .icon--react {
-    bottom: 60%;
-    left: 42%;
-    background-color: rgb(76, 145, 190);
+    bottom: 75%;
+    left: 45%;
+    color: rgb(76, 145, 190);
 }
 
 .icon--firebase {
-    bottom: 55%;
-    left: 55%;
-    background-color: rgb(202, 202, 92);
+    bottom: 66%;
+    right: 28%;
+    color: rgb(202, 202, 92);
 }
 
 .icon--api {
-    bottom: 40%;
-    left: 63%;
-    background-color: rgb(156, 197, 211);
+    bottom: 48%;
+    right: 18%;
+    color: rgb(156, 197, 211);
 
     img {
         display: block;
@@ -78,19 +88,49 @@
 }
 
 .icon--git {
-    bottom: 25%;
-    left: 68%;
-    background-color: rgb(214, 93, 13);
+    bottom: 30%;
+    right: 11%;
+    color: rgb(214, 93, 13);
 }
 
 .icon--figma {
-    bottom: 10%;
-    left: 71%;
-    background-color: rgb(158, 60, 158);
+    bottom: 12%;
+    right: 5%;
+    color: rgb(158, 60, 158);
 }
 
 @keyframes icon {
     to {
         opacity: 1;
+    }
+}
+
+@media (max-width: 1349px) {
+    .skills--img--box {
+        width: 65%;
+        left: 40%;
+        transform: translateX(-40%);
+    }
+
+    .skills--img {
+        width: 83%;
+    }
+}
+
+@media (min-width: 1350px) and (max-width: 1650px) {
+    .skills--img--box {
+        width: 60%;
+        left: 40%;
+        transform: translateX(-40%);
+    }
+}
+
+@media (min-width: 1800px) {
+    .skills--img--box {
+        width: 50%;
+    }
+
+    .skills--img {
+        width: 80%;
     }
 }
