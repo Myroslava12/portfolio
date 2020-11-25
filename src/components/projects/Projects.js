@@ -79,8 +79,8 @@ const Projects = () => {
                         <div className="tech--box tech--box-2">SASS</div>
                         <div className="tech--box tech--box-3">Webpack</div>
                         <div className="tech--box tech--box-4">npm</div>
-                        <div className="tech--box tech--box-5">YouTube API</div>
-                        <div className="tech--box tech--box-6">Open Opus API</div>
+                        <div className="tech--box tech--box-5">Firebase</div>
+                        <div className="tech--box tech--box-6">Firestore</div>
                     </div>
                 </div>
             </div>
