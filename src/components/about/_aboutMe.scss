@@ -72,7 +72,7 @@
 
 .about--link {
     background-color: transparent;
-    padding: 1rem 0;
+    padding: .7rem 0;
     text-align: center;
     color: $lightColor;
     font-size: 1.8rem;
@@ -81,20 +81,20 @@
     overflow: hidden;
     transition: .2s;
     z-index: 2;
+    border-bottom: 1.5px solid $mainColor;
     display: block;
-    width: 18.2rem;
-    border-radius: 2rem;
+    width: 15rem;
     margin-top: 4rem;
 
     &::after {
         position: absolute;
         content: '';
         background-color: $mainColor;
-        width: 4.2rem;
-        height: 100%;
+        width: 10%;
+        height: 10%;
         border-radius: 50%;
-        left: 0;
-        top: 0;
+        right: -10%;
+        bottom: -10%;
         transition: .2s;
         z-index: -1;
     }
@@ -103,6 +103,9 @@
 .about--link:hover:after {
     width: 100%;
     border-radius: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
 }
 
 .about--link:hover {

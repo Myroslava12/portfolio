@@ -87,7 +87,7 @@
     color: $lightColor;
     font-size: 1.6rem;
     font-family: 'Raleway', cursive;
-    width: 12rem;
+    width: 11rem;
 
     i {
         margin-left: 1rem;
@@ -100,19 +100,18 @@
     align-items: flex-end;
 }
 
-.foundation--img {
-    background-image: url(../images/foundation.png);
-}
-
-.classical--img {
-    background-image: url(../images/classical.png);
+.foundation--img, .classical--img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
 }
 
 .project--img {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: left bottom top right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projects--technologies {

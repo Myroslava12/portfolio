@@ -7,6 +7,7 @@ import Cursor from "../cursor/Cursor";
 import AboutMe from "../about/AboutMe";
 import Projects from "../projects/Projects";
 import Skills from '../skills/Skills';
+import Contact from "../contact/Contact";
 
 const Box = ({i, color}) => {
     const mesh = useRef(null);
@@ -51,10 +52,10 @@ const Home = () => {
                 </Canvas>
                 <Header />
             </div>
-            {/* <div className="section--bg"></div> */}
             <AboutMe />
             <Skills />
             <Projects />
+            <Contact />
         </div>
     )
 }

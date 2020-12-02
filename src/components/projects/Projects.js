@@ -12,7 +12,9 @@ const Projects = () => {
                         <h3 className="projects--title">ClassicalApp</h3>
                         <div className="project--card">
                             <div className="project--front">
-                                <div className="project--img classical--img"></div>
+                                <div className="project--img">
+                                    <img src={classical} alt="classical"  className="classical--img" />
+                                </div>
                             </div>
                             <div className="project--back">
                                 <h3 className="project--card--title">ClassicalApp 🎼</h3>
@@ -51,7 +53,9 @@ const Projects = () => {
                         <h3 className="projects--title">Foundation Project</h3>
                         <div className="project--card">
                             <div className="project--front">
-                                <div className="project--img foundation--img"></div>
+                                <div className="project--img">
+                                    <img src={foundation} alt="foundation" className="foundation--img" />
+                                </div>
                             </div>
                             <div className="project--back">
                                 <h3 className="project--card--title">Foundation Project</h3>

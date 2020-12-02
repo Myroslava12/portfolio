@@ -44,6 +44,61 @@ const Skills = () => {
                     <div className="skills--icon icon--figma" data-aos="fade-up">
                         <i className="fab fa-figma"></i>
                     </div>
+                    <div className="skill--text--box html--text">
+                        <span>body</span>
+                        <span>head</span>
+                        <span>section</span>
+                        <span>nav</span>
+                    </div>
+                    <div className="skill--text--box css--text">
+                        <span>flex</span>
+                        <span>BEM</span>
+                        <span>Bootstrap</span>
+                        <span>Grid</span>
+                    </div>
+                    <div className="skill--text--box js--text">
+                        <span>async/await</span>
+                        <span>Types</span>
+                        <span>DOM</span>
+                        <span>Functions</span>
+                        <span>Ojects</span>
+                        <span>ES6</span>
+                    </div>
+                    <div className="skill--text--box sass--text">
+                        <span>imports</span>
+                        <span>variables</span>
+                        <span>mixins</span>
+                        <span>functions</span>
+                    </div>
+                    <div className="skill--text--box react--text">
+                        <span>JSX</span>
+                        <span>Components</span>
+                        <span>Hooks</span>
+                        <span>Redux</span>
+                        <span>State</span>
+                    </div>
+                    <div className="skill--text--box firebase--text">
+                        <span>Authentication</span>
+                        <span>Database</span>
+                        <span>Firestore</span>
+                    </div>
+                    <div className="skill--text--box api--text">
+                        <span>JSON</span>
+                        <span>HTTP Methods</span>
+                        <span>Rest APIs</span>
+                    </div>
+                    <div className="skill--text--box git--text">
+                        <span>git init</span>
+                        <span>git clone</span>
+                        <span>git pull</span>
+                        <span>git push</span>
+                        <span>git branch</span>
+                    </div>
+                    <div className="skill--text--box figma--text">
+                        <span>design</span>
+                        <span>import filies</span>
+                        <span>Graphic</span>
+                    </div>
                 </div>
             </div>
         </div>

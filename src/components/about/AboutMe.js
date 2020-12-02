@@ -19,7 +19,7 @@ const AboutMe = () => {
                         JavaScript and <strong>React</strong>, and also I'm learning TypeScript. I
                         have a great enthusiasm for work, I will put a lot of work into writing clear and semantically correct code.
                     </p>
-                    <a href={cv} className="about--link" download>Downlong CV</a>
+                    <a href={cv} className="about--link" download>Download CV</a>
                 </div>
                 <div className="about--img--box">
                     <img className="my--picture" src={picture} alt="my-picture" />
