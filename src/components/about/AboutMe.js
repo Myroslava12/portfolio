@@ -20,7 +20,7 @@ const AboutMe = () => {
             animation: animate,
             trigger: about.current.children,
             start: "-350px center",
-            toggleActions: 'restart none none none'
+            toggleActions: 'play none none none'
         })
     }, []);
 

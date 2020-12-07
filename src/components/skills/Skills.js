@@ -20,7 +20,7 @@ const Skills = () => {
             animation: animate,
             trigger: imgBox.current.children,
             start: "-350px center",
-            toggleActions: 'restart none none none'
+            toggleActions: 'play none none none'
         })
     }
     
@@ -68,7 +68,7 @@ const Skills = () => {
                         <span>nav</span>
                     </div>
                     <div className="skill--text--box css--text">
-                        <span>flex</span>
+                        <span>Flex</span>
                         <span>BEM</span>
                         <span>Bootstrap</span>
                         <span>Grid</span>
@@ -78,7 +78,7 @@ const Skills = () => {
                         <span>Types</span>
                         <span>DOM</span>
                         <span>Functions</span>
-                        <span>Ojects</span>
+                        <span>Objects</span>
                         <span>ES6</span>
                     </div>
                     <div className="skill--text--box sass--text">
@@ -93,6 +93,7 @@ const Skills = () => {
                         <span>Hooks</span>
                         <span>Redux</span>
                         <span>State</span>
+                        <span>Context API</span>
                     </div>
                     <div className="skill--text--box firebase--text">
                         <span>Authentication</span>
@@ -112,8 +113,8 @@ const Skills = () => {
                         <span>git branch</span>
                     </div>
                     <div className="skill--text--box figma--text">
-                        <span>design</span>
-                        <span>import filies</span>
+                        <span>Design</span>
+                        <span>Import filies</span>
                         <span>Graphic</span>
                     </div>
                 </div>

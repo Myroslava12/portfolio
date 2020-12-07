@@ -16,7 +16,7 @@ const Contact = () => {
         ScrollTrigger.create({
             animation: animate,
             trigger: contact.current.children,
-            toggleActions: 'restart none none none'
+            toggleActions: 'play none none none'
         })
     }, []);
 

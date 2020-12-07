@@ -30,24 +30,23 @@ const Projects = () => {
     }
 
     const animateImage = (project) => {
-        const x = tl.staggerFromTo(project.current, 1, {
-            transform: "scaleX(0)",
+        const x = tl.staggerFromTo(project.current, .6, {
+            transform: "scale(0)",
         }, {
-            transform: "scaleX(1)",
-        }, .1);
+            transform: "scale(1)",
+        }, 0);
         ScrollTrigger.create({
             animation: x,
             trigger: project.current,
-            start: "top center",
             toggleActions: 'play none none none'
         })     
     }
 
     useEffect(() => {
-        animateTech(project1);
-        animateTech(project2);
         animateImage(imgAnimate1);
+        animateTech(project1);
         animateImage(imgAnimate2);
+        animateTech(project2);
         
     }, []);
 
