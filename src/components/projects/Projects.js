@@ -14,7 +14,7 @@ const Projects = () => {
     const tl = new TimelineMax();
 
     const animateTech = (project) => {
-        const x = tl.staggerFromTo(project.current.children, 1, {
+        const x = tl.staggerFromTo(project.current.children, .7, {
             transform: "scaleY(0)",
             bottom: 0,
         }, {
@@ -34,7 +34,7 @@ const Projects = () => {
             transform: "scaleX(0)",
         }, {
             transform: "scaleX(1)",
-        }, .2);
+        }, .1);
         ScrollTrigger.create({
             animation: x,
             trigger: project.current,
@@ -44,10 +44,11 @@ const Projects = () => {
     }
 
     useEffect(() => {
-        animateImage(imgAnimate1);
-        animateImage(imgAnimate2);
         animateTech(project1);
         animateTech(project2);
+        animateImage(imgAnimate1);
+        animateImage(imgAnimate2);
+        
     }, []);
 
     return (

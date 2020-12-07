@@ -8,7 +8,7 @@ const Contact = () => {
     const tl = new TimelineMax();
     
     useEffect(() => {
-        const animate = tl.staggerFromTo(contact.current.children, 1, {
+        const animate = tl.staggerFromTo(contact.current.children, .6, {
             transform: "scale(0)",
         }, {
             transform: "scale(1)",
