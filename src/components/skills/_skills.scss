@@ -17,16 +17,23 @@
 .skills--icon {
     width: 4.5rem;
     height: 4.5rem;
+    z-index: 2;
     position: absolute;
     padding: 1.5rem;
-    background-color: $lightColor;
+    border: 2px solid $lightColor;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: .2s;
 
     .fab {
         font-size: 3.5rem;
+    }
+
+    &:hover {
+        background-color: $lightColor;
     }
 }
 
@@ -43,42 +50,70 @@
     bottom: 12%;
     left: 3%;
     color: orange;
+
+    &:hover ~ .html--text {
+        opacity: 1 !important;
+    }
 }
 
 .icon--css {
     bottom: 30%;
     left: 9%;
     color: rgb(51, 157, 192);
+
+    &:hover ~ .css--text {
+        opacity: 1 !important;
+    }
 }
 
 .icon--js {
     bottom: 48%;
     left: 16%;
     color:rgba(214, 214, 7, 0.884);
+
+    &:hover ~ .js--text {
+        opacity: 1 !important;
+    }
 }
 
 .icon--sass {
     bottom: 66%;
     left: 26%;
     color:rgb(197, 96, 113);
+
+    &:hover ~ .sass--text {
+        opacity: 1 !important;
+    }
 }
 
 .icon--react {
     bottom: 75%;
     left: 45%;
     color: rgb(76, 145, 190);
+
+    &:hover ~ .react--text {
+        opacity: 1 !important;
+    }
 }
 
 .icon--firebase {
     bottom: 66%;
     right: 28%;
     color: rgb(202, 202, 92);
+
+    &:hover ~ .firebase--text {
+        opacity: 1 !important;
+    }
 }
 
 .icon--api {
     bottom: 48%;
     right: 18%;
     color: rgb(156, 197, 211);
+
+    &:hover ~ .api--text {
+        opacity: 1 !important;
+    }
 
     img {
         display: block;
@@ -90,37 +125,44 @@
     bottom: 30%;
     right: 11%;
     color: rgb(214, 93, 13);
+
+    &:hover ~ .git--text {
+        opacity: 1 !important;
+    }
 }
 
 .icon--figma {
     bottom: 12%;
     right: 5%;
     color: rgb(158, 60, 158);
+
+    &:hover ~ .figma--text {
+        opacity: 1 !important;
+    }
 }
 
 .skill--text--box {
     position: absolute;
-    left: 52%;
-    top: 45rem;
-    transform: translateX(-52%);
-    display: none;
-    width: 20%;
+    left: 50%;
+    top: 35rem;
+    transform: translateX(-50%);
+    display: flex;
+    opacity: 0 !important;
+    width: 75%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: .2s;
 
     span {
         color: $lightColor;
         flex-basis: 45%;
         font-size: 1.4rem;
-        padding: 1rem 0;
-        font-weight: 300;
+        padding: 1rem 0 4rem 0;
+        font-weight: 100;
+        text-align: center;
         font-family: 'Shrikhand', cursive;
     }
-}
-
-.html--text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 @keyframes icon {
@@ -140,9 +182,9 @@
         width: 83%;
     }
 
-    .skill--text--box {
-        top: 50em;
-    }
+    // .skill--text--box {
+    //     top: 50em;
+    // }
 }
 
 @media (min-width: 1350px) and (max-width: 1650px) {

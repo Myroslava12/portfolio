@@ -4,13 +4,13 @@
     height: 3rem;
     border-radius: 50%;
     border: .5rem solid $lightColor;
-    z-index: 2 ;
+    z-index: 1 ;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: .2s;
     transform-origin: 100% 100%;
-    transition-property: background-color, transform;
+    transition-property: background-color transform;
 }
 
 .cursor--hovered {

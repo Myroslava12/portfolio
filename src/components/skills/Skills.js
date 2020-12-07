@@ -1,47 +1,63 @@
-import React, {useEffect} from "react";
-import skills from "../images/skills.png";
+import React, {useEffect, useRef} from "react";
+import skills from "../images/skills3.png";
 import api from "../images/api.png";
 import firebase from "../images/firebase.png";
-import AOS from 'aos';
+import { TimelineMax, gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
+    const imgBox = useRef();
+    const tl = new TimelineMax();
+    
     useEffect(() => {
-        AOS.init({
-          duration : 500
-        });
-      }, []);
+
+        const x = tl.staggerFromTo(imgBox.current.children, 1, {
+            opacity: 0,
+            autoAlpha: 0,
+        }, {
+            opacity: 1,
+            autoAlpha: 1,
+        }, .2);
+        ScrollTrigger.create({
+            animation: x,
+            trigger: imgBox.current.children,
+            start: "-350px center",
+            toggleActions: 'restart pause resume pause'
+        })
+    }, []);
 
     return (
         <div className="skills--box" id="skills">
             <div className="app--container">
                 <h2 className="about--title">Technologies / Skills</h2>
-                <div className="skills--img--box">
-                    <img className="skills--img" src={skills} alt="skills" />
-                    <div className="skills--icon icon--html" data-aos="fade-up">
+                <div className="skills--img--box" ref={imgBox}>
+                    <img className="skills--img" src={skills} alt="skills"/>
+                    <div className="skills--icon icon--html">
                         <i className="fab fa-html5"></i>
                     </div>
-                    <div className="skills--icon icon--css" data-aos="fade-up">
+                    <div className="skills--icon icon--css">
                         <i className="fab fa-css3"></i>
                     </div>
-                    <div className="skills--icon icon--js" data-aos="fade-up">
+                    <div className="skills--icon icon--js">
                         <i className="fab fa-js"></i>
                     </div>
-                    <div className="skills--icon icon--sass" data-aos="fade-up">
+                    <div className="skills--icon icon--sass">
                         <i className="fab fa-sass"></i>
                     </div>
-                    <div className="skills--icon icon--react" data-aos="fade-up">
+                    <div className="skills--icon icon--react">
                         <i className="fab fa-react"></i>
                     </div>
-                    <div className="skills--icon icon--firebase" data-aos="fade-up">
+                    <div className="skills--icon icon--firebase">
                         <img src={firebase} className="firebase--img" alt="firebase" />
                     </div>
-                    <div className="skills--icon icon--api" data-aos="fade-up">
+                    <div className="skills--icon icon--api">
                         <img src={api} className="api--img" alt="api" />
                     </div>
-                    <div className="skills--icon icon--git" data-aos="fade-up">
+                    <div className="skills--icon icon--git">
                         <i className="fab fa-git-alt"></i>
                     </div>
-                    <div className="skills--icon icon--figma" data-aos="fade-up">
+                    <div className="skills--icon icon--figma">
                         <i className="fab fa-figma"></i>
                     </div>
                     <div className="skill--text--box html--text">

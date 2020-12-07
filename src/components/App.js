@@ -7,15 +7,6 @@ import Cursor from "./cursor/Cursor";
 
 function App() {
   return (
-    // <main className="main--app">
-      // <Router>
-      // <Cursor />
-      //   <Switch>
-      //     <Route exact path="/" component={Home} />
-      //     <Route path="/about" component={AboutMe} />
-      //   </Switch>
-      // </Router>
-    // </main>
     <>
       <Home />
       {/* <Cursor /> */}

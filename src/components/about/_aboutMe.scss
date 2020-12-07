@@ -71,45 +71,81 @@
 }
 
 .about--link {
-    background-color: transparent;
-    padding: .7rem 0;
+    --offset: 10px;
+    --border-size: 1.5px;
+    
+    display: block;
+    position: relative;
+    padding: 1.5rem .9rem;
+    appearance: none;
+    border: 0;
+    background: transparent;
     text-align: center;
     color: $lightColor;
+    margin-top: 4rem;
     font-size: 1.8rem;
     font-family: 'Raleway', cursive;
-    position: relative;
-    overflow: hidden;
-    transition: .2s;
-    z-index: 2;
-    border-bottom: 1.5px solid $mainColor;
-    display: block;
-    width: 15rem;
-    margin-top: 4rem;
-
-    &::after {
-        position: absolute;
-        content: '';
-        background-color: $mainColor;
-        width: 10%;
-        height: 10%;
-        border-radius: 50%;
-        right: -10%;
-        bottom: -10%;
-        transition: .2s;
-        z-index: -1;
-    }
-}
-
-.about--link:hover:after {
-    width: 100%;
+    font-weight: 500;
     border-radius: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-}
-
-.about--link:hover {
-    color: black;
+    width: 15rem;
+    box-shadow: inset 0 0 0 1.5px $mainColor;
+    transition: .3s ease;
+    
+    &:hover {
+      background: $mainColor;
+      color: black;
+    }
+    
+    .horizontal,
+    .vertical {
+        position: absolute;
+        top: var(--horizontal-offset, 0);
+        right: var(--vertical-offset, 0);
+        bottom: var(--horizontal-offset, 0);
+        left: var(--vertical-offset, 0);
+        transition: transform .8s ease;
+        will-change: transform;
+      
+        &::before {
+            content: '';
+            position: absolute;
+            border: inherit;
+        }
+    }
+    
+    .horizontal {
+        --vertical-offset: calc(var(--offset) * -1);
+        border-top: var(--border-size) solid $mainColor;
+        border-bottom: var(--border-size) solid $mainColor;
+      
+        &::before {
+            top: calc(var(--vertical-offset) - var(--border-size));
+            bottom: calc(var(--vertical-offset) - var(--border-size));
+            left: calc(var(--vertical-offset) * -1);
+            right: calc(var(--vertical-offset) * -1);
+        }
+    }
+    
+    &:hover .horizontal {
+        transform: scaleX(0);
+    }
+    
+    .vertical {
+        --horizontal-offset: calc(var(--offset) * -1);
+        border-left: var(--border-size) solid $mainColor;
+        border-right: var(--border-size) solid $mainColor;
+      
+        &::before {
+            top: calc(var(--horizontal-offset) * -1);
+            bottom: calc(var(--horizontal-offset) * -1);
+            left: calc(var(--horizontal-offset) - var(--border-size));
+            right: calc(var(--horizontal-offset) - var(--border-size));
+        }
+    }
+    
+    &:hover .vertical {
+        transform: scaleY(0);
+    } 
 }
 
 @keyframes text {

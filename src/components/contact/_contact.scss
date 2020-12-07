@@ -20,25 +20,33 @@
 
 .media--box {
     width: 40%;
-    margin: 3rem auto 5rem auto;
+    margin: 6rem auto 6rem auto;
     display: flex;
-    align-items: center;
     justify-content: space-around;
     padding: 1rem 0;
 }
 
 .contact--link {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $mainColor;
-
+    position: relative;
+    height: 7rem;
+    
+    &:hover i {
+        bottom: 1rem;
+    }
+    
     i {
-        color: black;
+        color: $mainColor;
         font-size: 2.5rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid $mainColor;
+        position: absolute;
+        bottom: 0;
+        transition: .2s;
     }
 }
 
