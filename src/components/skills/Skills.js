@@ -9,22 +9,23 @@ gsap.registerPlugin(ScrollTrigger);
 const Skills = () => {
     const imgBox = useRef();
     const tl = new TimelineMax();
-    
-    useEffect(() => {
 
-        const x = tl.staggerFromTo(imgBox.current.children, 1, {
-            opacity: 0,
+    const animateIcons = () => {
+        const animate = tl.staggerFromTo(imgBox.current.children, .8, {
             autoAlpha: 0,
         }, {
-            opacity: 1,
-            autoAlpha: 1,
+            autoAlpha: 1
         }, .2);
         ScrollTrigger.create({
-            animation: x,
+            animation: animate,
             trigger: imgBox.current.children,
             start: "-350px center",
-            toggleActions: 'restart pause resume pause'
+            toggleActions: 'restart none none none'
         })
+    }
+    
+    useEffect(() => {
+        animateIcons();
     }, []);
 
     return (
@@ -32,7 +33,7 @@ const Skills = () => {
             <div className="app--container">
                 <h2 className="about--title">Technologies / Skills</h2>
                 <div className="skills--img--box" ref={imgBox}>
-                    <img className="skills--img" src={skills} alt="skills"/>
+                    <img className="skills--img" src={skills} alt="skills" />
                     <div className="skills--icon icon--html">
                         <i className="fab fa-html5"></i>
                     </div>

@@ -9,7 +9,7 @@
     display: block;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
     bottom: 0;
     width: 90%;
 }
@@ -145,7 +145,7 @@
     position: absolute;
     left: 50%;
     top: 35rem;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
     display: flex;
     opacity: 0 !important;
     width: 75%;
