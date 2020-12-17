@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div className="header--box">
             <div className="home--text">
-                <svg id="main--text" width="911" height="81" viewBox="0 0 911 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg id="main--text" width="911px" height="81px" viewBox="0 0 911 81" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M46.2399 9.456V60H33.9279V39.192H14.7759V60H2.46387V9.456H14.7759V29.256H33.9279V9.456H46.2399Z" stroke="white" strokeWidth="3"/>
                     <path d="M61.3199 15.648C59.1599 15.648 57.3839 15.024 55.9919 13.776C54.6479 12.48 53.9759 10.896 53.9759 9.024C53.9759 7.104 54.6479 5.52 55.9919 4.272C57.3839 2.976 59.1599 2.328 61.3199 2.328C63.4319 2.328 65.1599 2.976 66.5039 4.272C67.8959 5.52 68.5919 7.104 68.5919 9.024C68.5919 10.896 67.8959 12.48 66.5039 13.776C65.1599 15.024 63.4319 15.648 61.3199 15.648ZM67.4399 19.824V60H55.1279V19.824H67.4399Z" stroke="white" strokeWidth="3"/>
                     <path d="M89.6103 48.624L81.6183 69.288H73.7703L77.9463 48.624H89.6103Z" stroke="white" strokeWidth="3"/>

@@ -161,7 +161,7 @@
         padding: 1rem 0 4rem 0;
         font-weight: 100;
         text-align: center;
-        font-family: 'Shrikhand', cursive;
+        font-family: $fontShrikhand;
     }
 }
 
@@ -181,10 +181,6 @@
     .skills--img {
         width: 83%;
     }
-
-    // .skill--text--box {
-    //     top: 50em;
-    // }
 }
 
 @media (min-width: 1350px) and (max-width: 1650px) {
@@ -202,5 +198,72 @@
 
     .skills--img {
         width: 80%;
+    }
+}
+
+@media #{$mobileScreen} {
+    .skills--box {
+        padding: 2rem 1rem 2rem 1.5rem;
+        width: 95%;
+        margin: 0 auto 4rem auto;
+        height: 55rem;
+    }
+
+    .skills--img--box {
+        width: 100%;
+        left: 0;
+        transform: none;
+        height: 60%;
+    }
+
+    .skills--icon {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        .fab {
+            font-size: 2.5rem;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .icon--react {
+        left: 42%;
+    }
+
+    .skill--text--box {
+        top: 20rem;
+        width: 60%;
+
+        span {
+            padding: 1rem 0;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (max-width: 399px) {
+    .icon--react {
+        left: 41%;
+    }
+}
+
+@media (max-width: 349px) {
+    .icon--firebase {
+        right: 26%;
+    }
+
+    .icon--api {
+        right: 16%;
+    }
+
+    .icon--git {
+        right: 10%;
+    }
+
+    .icon--react {
+        bottom: 77%;
     }
 }

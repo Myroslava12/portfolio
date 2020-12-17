@@ -1,2 +1,9 @@
 $lightColor:#edf1f0;
 $mainColor: #81ccb0;
+$fontRaleway: 'Raleway', cursive;
+$fontShrikhand: 'Shrikhand', cursive;
+
+$mobileScreen: '(min-width: 320px) and (max-width: 600px)';
+$mobileLargeScreen: '(min-width: 601px) and (max-width: 800px)';
+$tableScreen: '(min-width: 801px) and (max-width: 1024px)';
+$laptopScreen: '(min-width: 1025px) and (max-width: 1399px)';

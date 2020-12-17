@@ -2,9 +2,7 @@
     height: 100%;
     width: 15rem;
     position: fixed;
-    // background-color: rgba(0, 0, 0, .5);
     z-index: 1;
-    // position: relative;
 }
 
 .nav--line {
@@ -24,7 +22,7 @@
     padding: 2rem 0 0 2rem;
 
     a {
-        font-family: 'Shrikhand', cursive;
+        font-family: $fontShrikhand;
         font-weight: bold;
         color: $lightColor;
         font-size: 2rem;
@@ -56,13 +54,14 @@
 }
 
 .menu--link {
-    font-family: 'Raleway', sans-serif;
+    font-family: $fontRaleway;
     font-weight: 500;
     position: relative;
     z-index: 1;
     width: 4rem;
     height: 4rem;
     display: flex;
+    margin: 0 auto 0 2rem;
     justify-content: center;
     align-items: center;
 
@@ -99,6 +98,57 @@
     }
 }
 
-// .text--hovered {
-//     color: black !important;
-// }
+@media #{$mobileScreen} {
+    .nav--menu {
+        height: 8rem;
+        width: 100%;
+        left: 0;
+        flex-direction: row;
+        bottom: 0;
+        top: auto;
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        transform: none;
+        background-color: rgba(#000000, .6);
+        z-index: -1;
+
+        li {
+            margin: 0;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            border-bottom: .2rem dotted $lightColor;
+            z-index: -1;
+            opacity: .6;
+        }
+    }
+
+    .main--nav {
+        position: absolute;
+    }
+
+    .nav--line {
+        display: none;
+    }
+
+    .menu--link {
+        margin: 0;
+        
+        &:hover span {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        span {
+            font-size: 1.7rem;
+            transform: translateX(-50%) translateY(5rem);
+            left: 50%;
+            padding: 0;
+            text-align: center;
+        }
+    }
+}

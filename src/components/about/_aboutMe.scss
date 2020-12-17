@@ -1,12 +1,11 @@
 .section--about {
     width: 100%;
-    display: flex;
     position: relative;
     overflow: hidden;
     flex-wrap: wrap;
     margin: 3rem 0;
     padding: 3rem 0 3rem 15rem;
-
+    
     .app--container {
         display: flex;
         height: 100%;
@@ -33,7 +32,7 @@
     font-size: 5rem;
     line-height: 5.5rem;
     font-weight: 500;
-    font-family: 'Shrikhand', cursive;
+    font-family: $fontShrikhand;
     text-shadow: .6rem 3rem rgba(252, 250, 232, .1);
     position: relative;
 }
@@ -60,12 +59,12 @@
     color: $lightColor;
     font-size: 1.7rem;
     line-height: 2.4rem;
-    font-family: 'Raleway', cursive;
+    font-family: $fontRaleway;
     letter-spacing: .9px;
 
     strong {
         color: $mainColor;
-        font-family: 'Shrikhand', cursive;
+        font-family: $fontShrikhand;
         font-weight: 400;
     }
 }
@@ -84,7 +83,7 @@
     color: $lightColor;
     margin-top: 4rem;
     font-size: 1.8rem;
-    font-family: 'Raleway', cursive;
+    font-family: $fontRaleway;
     font-weight: 500;
     border-radius: 0;
     width: 15rem;
@@ -157,5 +156,33 @@
 @media (max-width: 1650px) {
     .about--info {
         margin: 0;
+    }
+}
+
+@media #{$mobileScreen} {
+    .section--about {
+        padding: 2rem 0;
+        
+        .app--container {
+            flex-direction: column;
+        }
+    }
+
+    .about--info {
+        width: 95%;
+        padding: 0 1rem 2rem 1.5rem;
+        margin: 0 auto;
+    }
+
+    .about--title {
+        font-size: 4.1rem;
+    }
+
+    .about--img--box {
+        width: 100%;
+    }
+
+    .my--picture {
+        border-radius: 0;
     }
 }

@@ -1,35 +1,12 @@
-import React, { useRef, useState } from 'react';
-import { Canvas,  useFrame, useThree } from 'react-three-fiber';
-import {MeshWobbleMaterial, OrbitControls} from "drei";
+import React from 'react';
+import { Canvas } from 'react-three-fiber';
 import Navigation from "../navigation/Navigation";
 import Header from "../header/Header";
-import Cursor from "../cursor/Cursor";
 import AboutMe from "../about/AboutMe";
 import Projects from "../projects/Projects";
 import Skills from '../skills/Skills';
 import Contact from "../contact/Contact";
-
-const Box = ({i, color}) => {
-    const mesh = useRef(null);
-    
-    useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
-    const { viewport } = useThree();
-
-    return (
-        <mesh 
-            position={[i < 5 ? 0 : viewport.width / 2 - Math.random() * viewport.width, i < 5 ? 0 : viewport.height / 2 - Math.random() * viewport.height, i < 6 ? 10 : 10 - Math.random() * 35]}
-            ref={mesh}
-         >
-            <octahedronGeometry name="geometry" color={color} args={[.5]} />
-            <MeshWobbleMaterial 
-                attach='material'
-                color={color}
-                speed={1}
-                factor={3}
-            />
-        </mesh>
-    )
-}
+import Box from "./Box";
 
 const Home = () => {
 
@@ -48,7 +25,6 @@ const Home = () => {
                             args={[.6, .6, .6]}
                         />
                     })}
-                    {/* <OrbitControls /> */}
                 </Canvas>
                 <Header />
             </div>

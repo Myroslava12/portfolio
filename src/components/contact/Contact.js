@@ -31,7 +31,7 @@ const Contact = () => {
                     </div>
                     <div className="media--box" ref={contact}>
                         <a className="contact--link" href="https://github.com/Myroslava12" target="_blank"><i className="fab fa-github"></i></a>
-                        <a className="contact--link" href="https://www.linkedin.com/in/myroslava-skala-342b21196/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a className="contact--link" href="https://www.linkedin.com/in/myroslava-skala-342b21196/" target="_blank"><i className="fab fa-linkedin-in"></i></a>
                         <a className="contact--link" href="https://www.facebook.com/myroslava.skala" target="_blank"><i className="fab fa-facebook"></i></a>
                         <a className="contact--link" href="https://www.instagram.com/skala_mira/" target="_blank"><i className="fab fa-instagram"></i></a>
                         <a className="contact--link" href="https://web.telegram.org/#/im" target="_blank"><i className="fab fa-telegram"></i></a>

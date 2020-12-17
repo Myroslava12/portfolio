@@ -4,12 +4,11 @@
     margin: 6rem 0 3rem 0;
     display: block;
     box-sizing: border-box;
-    font-family: 'Raleway', cursive;
+    font-family: $fontRaleway;
 
     .app--container {
         height: 100%;
         width: 100%;
-        
     }
 }
 
@@ -41,7 +40,6 @@
     overflow: hidden;
     backface-visibility: hidden;
     transition: transform .6s;
-    // border-radius: 2rem;
 }
 
 .project--card:hover > .project--front {
@@ -64,8 +62,15 @@
     font-size: 2.4rem;
     line-height: 3rem;
     font-weight: 400;
-    font-family: 'Shrikhand', cursive;
-    margin: 2rem 0;
+    font-family: $fontShrikhand;
+    margin: 2rem 0 1rem 0;
+}
+
+.project--card--subtitle {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
 }
 
 .project--card--text {
@@ -86,7 +91,7 @@
 .project--link {
     color: $lightColor;
     font-size: 1.6rem;
-    font-family: 'Raleway', cursive;
+    font-family: $fontRaleway;
     width: 11rem;
 
     i {
@@ -305,5 +310,168 @@
 
     .project--link--box {
         width: 60%;
+    }
+}
+
+@media #{$mobileScreen} {
+    .app--container {
+        padding-right: 0;
+    }
+
+    .projects--section {
+        padding: 2rem 1rem 2rem 1.5rem;
+        width: 95%;
+        margin: 0 auto;
+
+        .about--title {
+            margin: 0;
+        }
+    }
+
+    .projects--box {
+        flex-direction: column;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        height: 95rem;
+    }
+
+    .projects--info {
+        width: 100%;
+    }
+
+    .project--card {
+        width: 100%;
+        height: 40rem;
+    }
+
+    .project--back, .project--front {
+        height: 100%;
+    }
+
+    .projects--technologies {
+        width: 100%;
+        max-width: 35rem;
+        margin: 0 auto 2rem auto;
+        height: 44rem;
+    }
+
+    .project--border--1, .project--border--6 {
+        height: 5rem;
+    }
+
+    .project--border--2, .project--border--5 {
+        height: 12rem;
+        width: 8rem;
+    }
+
+    .project--border--3, .project--border--4 {
+        height: 22rem;
+        width: 10.5rem;
+    }
+
+    .project--border--1 {
+        right: 57%;
+        left: auto;
+    }
+
+    .project--border--2 {
+        right: 54%;
+        left: auto;
+    }
+
+    .project--border--3 {
+        right: 51%;
+        left: auto;
+    }
+
+    .project--border--4 {
+        left: 52%;
+    }
+
+    .project--border--5 {
+        left: 55%;
+    }
+
+    .project--border--6 {
+        left: 58%;
+    }
+
+    .tech--box-5, .tech--box-6 {
+        top: 14rem;
+    }
+
+    .tech--box-6 {
+        right: 0%;
+        left: auto;
+    }
+
+    .tech--box-5 {
+        left: 0%;
+    }
+
+    .tech--box-3, .tech--box-4 {
+        top: 37rem;
+    }
+
+    .tech--box-3 {
+        left: 2%;
+    }
+
+    .tech--box-4 {
+        right: 2%;
+        left: auto;
+    }
+
+    .tech--box-1, .tech--box-2 {
+        top: 25rem;
+    }
+
+    .tech--box-1 {
+        left: 5%;
+    }
+
+    .tech--box-2 {
+        right: 5%;
+        left: auto;
+    }
+
+    .project--back {
+        padding: 1rem 1.5rem;
+    }
+
+    .project--card--text {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .project--link--box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 399px) {
+    .projects--technologies {
+        max-width: 32rem;
+    }
+
+    .tech--box-1 {
+        left: 4%;
+    }
+
+    .tech--box-2 {
+        right: 4%;
+    }
+
+    .tech--box-3 {
+        left: 0%;
+    }
+
+    .tech--box-4 {
+        right: 0%;
+    }
+
+    .tech--box {
+        width: 10rem;
+        font-size: 1.2rem;
     }
 }

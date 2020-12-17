@@ -29,7 +29,7 @@ body {
     margin: 0 auto;
 }
 
-@media (max-width: 1650px) {
+@media (min-width: 1350px) and (max-width: 1650px) {
     .app--container {
         width: 100%;
         padding-right: 2.5rem;
