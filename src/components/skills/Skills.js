@@ -110,7 +110,7 @@ const Skills = () => {
                         <span>git clone</span>
                         <span>git pull</span>
                         <span>git push</span>
-                        <span>git branch</span>
+                        <span>git merge</span>
                     </div>
                     <div className="skill--text--box figma--text">
                         <span>Design</span>

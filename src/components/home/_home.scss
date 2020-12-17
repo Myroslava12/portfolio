@@ -18,3 +18,9 @@
     overflow: hidden;
     position: relative;
 }
+
+@media #{$mobileScreen} {
+    .canvas--box {
+        height: calc(100vh - 8rem);
+    }
+}
