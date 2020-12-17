@@ -24,3 +24,9 @@
         height: calc(100vh - 8rem);
     }
 }
+
+@media #{$tableScreen}, #{$mobileLargeScreen} {
+    .canvas--box {
+        height: calc(100vh - 9rem);
+    }
+}

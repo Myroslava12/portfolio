@@ -201,12 +201,13 @@
     }
 }
 
-@media #{$mobileScreen} {
+@media #{$mobileScreen}, #{$mobileLargeScreen} {
     .skills--box {
         padding: 2rem 1rem 2rem 1.5rem;
         width: 95%;
         margin: 0 auto 4rem auto;
         height: 55rem;
+        box-sizing: border-box;
     }
 
     .skills--img--box {
@@ -214,6 +215,14 @@
         left: 0;
         transform: none;
         height: 60%;
+    }
+
+    .icon--firebase {
+        right: 27%;
+    }
+
+    .icon--api {
+        right: 17%;
     }
 
     .skills--icon {
@@ -246,7 +255,17 @@
 
 @media (max-width: 399px) {
     .icon--react {
-        left: 41%;
+        left: 42%;
+        bottom: 77%;
+    }
+
+    .icon--git {
+        right: 10%;
+    }
+
+    .skills--icon {
+        width: 2rem;
+        height: 2rem;
     }
 }
 
@@ -265,5 +284,42 @@
 
     .icon--react {
         bottom: 77%;
+    }
+}
+
+@media #{$mobileLargeScreen}, #{$tableScreen} {
+    .skills--box {
+        padding: 2rem 1rem 2rem 1.5rem;
+        width: 100%;
+        margin: 0 auto 4rem auto;
+        padding: 2rem;
+        height: 65rem;
+        box-sizing: border-box;
+    }
+
+    .skills--img--box {
+        width: 75%;
+        height: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .icon--react {
+        left: 44%;
+    }
+
+    .skill--text--box {
+        top: 25rem;
+        width: 65%;
+    }
+}
+
+@media #{$mobileLargeScreen} {
+    .icon--react {
+        left: 44%;
+    }
+
+    .skills--img--box {
+        height: 70%;
     }
 }

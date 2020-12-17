@@ -306,13 +306,19 @@
     }
 }
 
-@media #{$mobileScreen} {
+@media #{$mobileScreen}, #{$mobileLargeScreen}, #{$tableScreen} {
     #work--title {
         width: 90%;
-        height: 4rem;
+        // height: 4rem;
     }
 
     #main--text {
         width: 95%;
+    }
+}
+
+@media #{$mobileLargeScreen} and (max-height: 380px) {
+    #work--title {
+        height: 11rem;
     }
 }

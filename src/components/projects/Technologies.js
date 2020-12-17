@@ -29,7 +29,7 @@ const Technologies = ({array}) => {
 
     return (
         <div className="projects--technologies" ref={project}>
-            <h3 className="projects--title">Technologies</h3>
+            <h3 className="projects--title projects--title--tech">Technologies</h3>
             <div className="projects--border project--border--1"></div>
             <div className="projects--border project--border--2"></div>
             <div className="projects--border project--border--3"></div>

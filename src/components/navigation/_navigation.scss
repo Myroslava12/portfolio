@@ -70,7 +70,7 @@
     }
 
     &:hover .fa {
-        transform: translateY(-4.5rem);
+        transform: translateY(-5rem);
     }
 
     &:hover span {
@@ -98,7 +98,7 @@
     }
 }
 
-@media #{$mobileScreen} {
+@media #{$mobileScreen}, #{$mobileLargeScreen}, #{$tableScreen} {
     .main--nav {
         z-index: 3;
     }
@@ -121,6 +121,8 @@
         li {
             margin: 0;
             padding: 1rem;
+            display: flex;
+            justify-content: center;
         }
 
         &::before {
@@ -162,6 +164,25 @@
     .menu--link {
         span {
             font-size: 1.5rem;
+        }
+    }
+}
+
+@media #{$tableScreen}, #{$mobileLargeScreen} {
+    .menu--link {
+        .fa {
+            font-size: 4.5rem;
+        }
+    }
+
+    .nav--menu {
+        height: 10rem;
+        justify-content: space-between;
+        background-color: rgba(#000000, .8);
+
+        span {
+            font-size: 2rem;
+            font-weight: 600;
         }
     }
 }
