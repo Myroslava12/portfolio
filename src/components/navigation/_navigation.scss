@@ -99,6 +99,10 @@
 }
 
 @media #{$mobileScreen} {
+    .main--nav {
+        z-index: 3;
+    }
+
     .nav--menu {
         height: 8rem;
         width: 100%;
@@ -116,6 +120,7 @@
 
         li {
             margin: 0;
+            padding: 1rem;
         }
 
         &::before {
@@ -138,7 +143,7 @@
 
     .menu--link {
         margin: 0;
-        
+
         &:hover span {
             transform: translateX(-50%) translateY(0);
         }
@@ -149,6 +154,14 @@
             left: 50%;
             padding: 0;
             text-align: center;
+        }
+    }
+}
+
+@media (max-width: 399px) {
+    .menu--link {
+        span {
+            font-size: 1.5rem;
         }
     }
 }
