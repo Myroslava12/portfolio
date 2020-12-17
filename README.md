@@ -1,7 +1,8 @@
 
 # Hi!👋 I'm Mira
 
-I am Junior Front End Developer who is passionate about stuff like deep learning JavaScript: React. A few libraries with I enjoy working: GSAP, Three.js.
+I am Junior Front End Developer who is passionate about stuff like deep learning JavaScript: React. 
+A few libraries with I enjoy working: GSAP, Three.js.
 
 Currently working, learning and growing my skillset in JavaScript.
 
