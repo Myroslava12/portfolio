@@ -1,14 +1,22 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useContext} from "react";
+import {NavigationContext} from "../../context/context";
+import { useInView } from 'react-intersection-observer';
 import picture from "../images/my-picture.png";
 import cv from "../images/Myroslava Skala.pdf";
 import Cursor from "../cursor/Cursor";
 import { TimelineMax, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = () => {
+    const activeAboutMe = useContext(NavigationContext);
     const about = useRef();
     const tl = new TimelineMax();
+
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
     
     useEffect(() => {
         const animate = tl.staggerFromTo(about.current.children, 1, {
@@ -24,8 +32,10 @@ const AboutMe = () => {
         })
     }, []);
 
+    useEffect(() => {inView && activeAboutMe.setActiveRoute("AboutMe")}, [inView]);
+
     return (
-        <section className="section--about" id="about">
+        <section className="section--about" id="about" ref={ref}>
             <div className="app--container" ref={about}>
                 <div className="about--info">
                     <h2 className="about--title">About me</h2>

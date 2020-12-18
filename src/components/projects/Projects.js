@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import {NavigationContext} from "../../context/context";
+import { useInView } from 'react-intersection-observer';
 import classical from "../images/classical.png";
 import foundation from "../images/foundation.png";
 import Technologies from "./Technologies";
@@ -7,9 +9,16 @@ import FrontCard from "./FrontCard";
 const Projects = () => {
     const techArray1 = ["React", "SASS", "Webpack", "npm", "YouTube API", "Open Opus API"];
     const techArray2 = ["React", "SASS", "Webpack", "npm", "Firebase", "Firestore"];
+    const activeProjects = useContext(NavigationContext);
+
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
+
+    useEffect(() => {inView && activeProjects.setActiveRoute("Projects")}, [inView]);
 
     return (
-        <section className="projects--section" id="projects">
+        <section className="projects--section" id="projects" ref={ref}>
             <div className="app--container">
                 <h2 className="about--title">My Projects</h2>
                 <div className="projects--box">

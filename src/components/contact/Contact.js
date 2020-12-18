@@ -1,4 +1,6 @@
-import React, {useRef, useEffect} from "react";
+import React, {useRef, useEffect, useContext} from "react";
+import {NavigationContext} from "../../context/context";
+import { useInView } from 'react-intersection-observer';
 import { TimelineMax, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -6,6 +8,13 @@ gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
     const contact = useRef();
     const tl = new TimelineMax();
+    const activeContact = useContext(NavigationContext);
+
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
+
+    useEffect(() => {inView && activeContact.setActiveRoute("Contact")}, [inView]);
     
     useEffect(() => {
         const animate = tl.staggerFromTo(contact.current.children, .6, {
@@ -21,7 +30,7 @@ const Contact = () => {
     }, []);
 
     return (
-        <section className="section--contact" id="contact">
+        <section className="section--contact" id="contact" ref={ref}>
             <div className='app--container'>
                 <h2 className="about--title">Contact Me</h2>
                 <div className="contact--box">

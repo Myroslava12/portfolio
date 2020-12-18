@@ -1,4 +1,6 @@
-import React, {useEffect, useRef} from "react";
+import React, {useContext, useEffect, useRef} from "react";
+import {NavigationContext} from "../../context/context";
+import { useInView } from 'react-intersection-observer';
 import skills from "../images/skills3.png";
 import api from "../images/api.png";
 import firebase from "../images/firebase.png";
@@ -9,6 +11,13 @@ gsap.registerPlugin(ScrollTrigger);
 const Skills = () => {
     const imgBox = useRef();
     const tl = new TimelineMax();
+    const activeSkills = useContext(NavigationContext);
+
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
+
+    useEffect(() => {inView && activeSkills.setActiveRoute("Skills")}, [inView]);
 
     const animateIcons = () => {
         const animate = tl.staggerFromTo(imgBox.current.children, .8, {
@@ -29,7 +38,7 @@ const Skills = () => {
     }, []);
 
     return (
-        <div className="skills--box" id="skills">
+        <div className="skills--box" id="skills" ref={ref}>
             <div className="app--container">
                 <h2 className="about--title">Technologies / Skills</h2>
                 <div className="skills--img--box" ref={imgBox}>

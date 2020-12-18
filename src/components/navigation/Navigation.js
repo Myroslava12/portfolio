@@ -1,64 +1,54 @@
-import React, { useState } from "react";
-import {NavLink} from "react-router-dom";
+import React, { useContext } from "react";
 import {Link} from "react-scroll";
 import cx from "classnames";
+import {NavigationContext} from "../../context/context";
 
 const Navigation = () => {
-    const [move, setMove] = useState(false);
-    const onMouseMove = () => setMove(true);
-
-    const onMouseOut = () => setMove(false);
+    const activeComponent = useContext(NavigationContext);
 
     return (
         <nav className="main--nav">
                 <div className="nav--logo">
-                    <a
-                        className={cx({"text--hovered": move })} 
-                        href="/"
-                        onMouseMove={onMouseMove} 
-                        onMouseOut={onMouseOut} 
-                    >
-                        mi.skala
-                    </a>
+                    <a href="/">mi.skala</a>
                 </div>
                 <ul className="nav--menu">
                     <li>
                         <Link 
-                            onMouseMove={onMouseMove} 
-                            onMouseOut={onMouseOut} 
                             to="home"
                             smooth={true}
                             duration={500}
-                            className="menu--link"
+                            className={cx("menu--link", {
+                                "active--component": activeComponent.activeRoute === "Home" 
+                            })} 
                         >
                             <i className="fa fa-home"></i>
-                            <span className={cx( {"text--hovered": move })}>Home</span>
+                            <span>Home</span>
                         </Link>
                     </li>
                     <li>
                         <Link 
-                            onMouseMove={onMouseMove} 
-                            onMouseOut={onMouseOut}
                             to="about"
                             smooth={true}
                             duration={400}
-                            className="menu--link"
+                            className={cx("menu--link", {
+                                "active--component": activeComponent.activeRoute === "AboutMe" 
+                            })} 
                         >
                             <i className="fa fa-user"></i>
-                            <span className={cx({"text--hovered": move })}>About</span>
+                            <span>About</span>
                         </Link>
                     </li>
                     <li>
                         <Link 
-                            onMouseMove={onMouseMove} 
-                            onMouseOut={onMouseOut}
                             to="skills" 
                             smooth={true}
                             duration={400}
-                            className="menu--link"
+                            className={cx("menu--link", {
+                                "active--component": activeComponent.activeRoute === "Skills" 
+                            })} 
                         >
                             <i className="fa fa-code"></i>
-                            <span className={cx({"text--hovered": move })}>Skills</span>
+                            <span>Skills</span>
                         </Link>
                     </li>
                     <li>
@@ -66,12 +56,12 @@ const Navigation = () => {
                             to="projects"
                             smooth={true}
                             duration={500} 
-                            className="menu--link"
-                            onMouseMove={onMouseMove} 
-                            onMouseOut={onMouseOut} 
+                            className={cx("menu--link", {
+                                "active--component": activeComponent.activeRoute === "Projects" 
+                            })} 
                         >
                             <i className="fa fa-folder-open"></i>
-                            <span className={cx({"text--hovered": move })}>Projects</span>
+                            <span>Projects</span>
                         </Link>
                     </li>
                     <li>
@@ -79,12 +69,12 @@ const Navigation = () => {
                             to="contact"
                             smooth={true}
                             duration={600} 
-                            className="menu--link"
-                            onMouseMove={onMouseMove} 
-                            onMouseOut={onMouseOut} 
+                            className={cx("menu--link", {
+                                "active--component": activeComponent.activeRoute === "Contact" 
+                            })} 
                         >
                             <i className="fa fa-envelope"></i>
-                            <span className={cx({"text--hovered": move })}>Contact</span>
+                            <span>Contact</span>
                         </Link>
                     </li>
                 </ul>
