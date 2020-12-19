@@ -27,15 +27,15 @@ const Navigation = () => {
                     </li>
                     <li>
                         <Link 
-                            to="about"
+                            to="projects"
                             smooth={true}
-                            duration={400}
+                            duration={500} 
                             className={cx("menu--link", {
-                                "active--component": activeComponent.activeRoute === "AboutMe" 
+                                "active--component": activeComponent.activeRoute === "Projects" 
                             })} 
                         >
-                            <i className="fa fa-user"></i>
-                            <span>About</span>
+                            <i className="fa fa-folder-open"></i>
+                            <span>Projects</span>
                         </Link>
                     </li>
                     <li>
@@ -53,15 +53,15 @@ const Navigation = () => {
                     </li>
                     <li>
                         <Link 
-                            to="projects"
+                            to="about"
                             smooth={true}
-                            duration={500} 
+                            duration={400}
                             className={cx("menu--link", {
-                                "active--component": activeComponent.activeRoute === "Projects" 
+                                "active--component": activeComponent.activeRoute === "AboutMe" 
                             })} 
                         >
-                            <i className="fa fa-folder-open"></i>
-                            <span>Projects</span>
+                            <i className="fa fa-user"></i>
+                            <span>About</span>
                         </Link>
                     </li>
                     <li>

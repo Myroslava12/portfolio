@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import {NavigationContext} from "../../context/context";
 import { Canvas } from 'react-three-fiber';
-import Header from "../header/Header";
+import Header from "./HomeTitle";
 import Box from "./Box";
 import { useInView } from 'react-intersection-observer';
 

@@ -23,7 +23,7 @@ const Projects = () => {
         <section className="projects--section" id="projects" ref={ref}>
             <div className="app--container">
                 <h2 className="about--title">My Projects</h2>
-                <div className="projects--box">
+                <article className="projects--box">
                     <div className="projects--info">
                         <h3 className="projects--title">1.&nbsp;&nbsp;ClassicalApp</h3>
                         <div className="project--card">
@@ -44,9 +44,9 @@ const Projects = () => {
                         </div>
                     </div>
                     <Technologies array={techProject1} />
-                </div>
+                </article>
 
-                <div className="projects--box">
+                <article className="projects--box">
                     <div className="projects--info">
                         <h3 className="projects--title">2.&nbsp;&nbsp;Foundation Project</h3>
                         <div className="project--card">
@@ -66,7 +66,7 @@ const Projects = () => {
                         </div>
                     </div>
                     <Technologies array={techProject2} />
-                </div>
+                </article>
             </div>
         </section>
     )

@@ -39,7 +39,7 @@ const Skills = () => {
     }, []);
 
     return (
-        <div className="skills--box" id="skills" ref={ref}>
+        <section className="skills--box" id="skills" ref={ref}>
             <div className="app--container">
                 <h2 className="about--title">Technologies / Skills</h2>
                 <div className="skills--img--box" ref={imgBox}>
@@ -129,7 +129,7 @@ const Skills = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

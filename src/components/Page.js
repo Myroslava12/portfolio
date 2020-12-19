@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavigationProvider } from "../context/context";
 import Navigation from "./navigation/Navigation";
 import Home from "./home/Home";
@@ -13,9 +13,9 @@ const Page = () => {
             <NavigationProvider>
                 <Navigation />
                 <Home />
-                <AboutMe />
-                <Skills />
                 <Projects />
+                <Skills />
+                <AboutMe />
                 <Contact />
             </NavigationProvider>
         </div>
