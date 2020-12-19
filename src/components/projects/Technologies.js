@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Technologies = ({array}) => {
+export const Technologies = ({array}) => {
     const project = useRef();
     const tl = new TimelineMax();
     const animateTech = (project) => {
@@ -42,5 +42,3 @@ const Technologies = ({array}) => {
         </div>
     )
 }
-
-export default Technologies;

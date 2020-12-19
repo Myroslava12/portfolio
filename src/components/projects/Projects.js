@@ -3,13 +3,13 @@ import {NavigationContext} from "../../context/context";
 import { useInView } from 'react-intersection-observer';
 import classical from "../../images/classical.jpg";
 import foundation from "../../images/foundation.jpg";
-import Technologies from "./Technologies";
-import FrontCard from "./FrontCard";
+import { Technologies } from "./Technologies";
+import { FrontCard } from "./FrontCard";
 
 const techProject1 = ["React", "SASS", "Webpack", "npm", "YouTube API", "Open Opus API"];
 const techProject2 = ["React", "SASS", "Webpack", "npm", "Firebase", "Firestore"];
 
-const Projects = () => {
+export const Projects = () => {
     const activeProjects = useContext(NavigationContext);
 
     const { ref, inView } = useInView({
@@ -71,5 +71,3 @@ const Projects = () => {
         </section>
     )
 }
-
-export default Projects;

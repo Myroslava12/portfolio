@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AboutMe = () => {
+export const AboutMe = () => {
     const activeAboutMe = useContext(NavigationContext);
     const about = useRef();
     const tl = new TimelineMax();
@@ -59,5 +59,3 @@ const AboutMe = () => {
         </section>
     )
 }
-
-export default AboutMe;

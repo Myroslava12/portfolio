@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FrontCard = ({img, style}) => {
+export const FrontCard = ({img, style}) => {
     const image = useRef();
     const tl = new TimelineMax();
 
@@ -33,5 +33,3 @@ const FrontCard = ({img, style}) => {
         </div>
     )
 }
-
-export default FrontCard;

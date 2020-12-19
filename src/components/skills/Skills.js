@@ -8,7 +8,7 @@ import { TimelineMax, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const Skills = () => {
+export const Skills = () => {
     const imgBox = useRef();
     const tl = new TimelineMax();
     const activeSkills = useContext(NavigationContext);
@@ -132,5 +132,3 @@ const Skills = () => {
         </section>
     )
 }
-
-export default Skills;

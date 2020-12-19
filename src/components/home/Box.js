@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useFrame, useThree } from 'react-three-fiber';
 import {MeshWobbleMaterial} from "drei";
 
-const Box = ({i, color}) => {
+export const Box = ({i, color}) => {
     const mesh = useRef(null);
     
     useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
@@ -23,5 +23,3 @@ const Box = ({i, color}) => {
         </mesh>
     )
 }
-
-export default Box;

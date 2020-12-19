@@ -5,7 +5,7 @@ import { TimelineMax, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const Contact = () => {
+export const Contact = () => {
     const contact = useRef();
     const tl = new TimelineMax();
     const activeContact = useContext(NavigationContext);
@@ -52,5 +52,3 @@ const Contact = () => {
         </section>
     )
 }
-
-export default Contact;

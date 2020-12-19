@@ -1,15 +1,15 @@
 import React, { useEffect, useContext } from 'react';
 import {NavigationContext} from "../../context/context";
 import { Canvas } from 'react-three-fiber';
-import Header from "./HomeTitle";
-import Box from "./Box";
+import { Header } from "./HomeTitle";
+import { Box } from "./Box";
 import { useInView } from 'react-intersection-observer';
 
-const Home = () => {
+export const Home = () => {
     const activeHome = useContext(NavigationContext);
     const { ref, inView } = useInView({
         threshold: 0,
-        rootMargin: "-150px",
+        rootMargin: "-100px",
     });
 
     useEffect(() => {inView && activeHome.setActiveRoute("Home")}, [inView]);
@@ -32,5 +32,3 @@ const Home = () => {
         </div>
     )
 }
-
-export default Home;

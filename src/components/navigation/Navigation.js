@@ -3,7 +3,7 @@ import {Link} from "react-scroll";
 import cx from "classnames";
 import {NavigationContext} from "../../context/context";
 
-const Navigation = () => {
+export const Navigation = () => {
     const activeComponent = useContext(NavigationContext);
 
     return (
@@ -82,5 +82,3 @@ const Navigation = () => {
         </nav>
     )
 }
-
-export default Navigation;
