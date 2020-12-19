@@ -1,10 +1,9 @@
-@import "./scss/variables.scss";
-@import "./scss/reset";
+@import "../scss/variables.scss";
+@import "../scss/reset";
 @import "../components/navigation/navigation";
 @import "./home/home";
 @import "./header/header";
 @import "./about/aboutMe";
-@import "./cursor/cursor";
 @import "./skills/skills";
 @import "aos/dist/aos.css";
 @import "./projects/projects";
@@ -14,10 +13,6 @@
 html {
     font-size: 10px;
 }
-
-// html, body {
-//     cursor: none;
-// }
 
 body {
     width: 100%;

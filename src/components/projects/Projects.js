@@ -1,14 +1,15 @@
 import React, { useContext, useEffect } from "react";
 import {NavigationContext} from "../../context/context";
 import { useInView } from 'react-intersection-observer';
-import classical from "../images/classical.png";
-import foundation from "../images/foundation.png";
+import classical from "../../images/classical.jpg";
+import foundation from "../../images/foundation.jpg";
 import Technologies from "./Technologies";
 import FrontCard from "./FrontCard";
 
+const techProject1 = ["React", "SASS", "Webpack", "npm", "YouTube API", "Open Opus API"];
+const techProject2 = ["React", "SASS", "Webpack", "npm", "Firebase", "Firestore"];
+
 const Projects = () => {
-    const techArray1 = ["React", "SASS", "Webpack", "npm", "YouTube API", "Open Opus API"];
-    const techArray2 = ["React", "SASS", "Webpack", "npm", "Firebase", "Firestore"];
     const activeProjects = useContext(NavigationContext);
 
     const { ref, inView } = useInView({
@@ -42,7 +43,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <Technologies array={techArray1} />
+                    <Technologies array={techProject1} />
                 </div>
 
                 <div className="projects--box">
@@ -64,7 +65,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <Technologies array={techArray2} />
+                    <Technologies array={techProject2} />
                 </div>
             </div>
         </section>

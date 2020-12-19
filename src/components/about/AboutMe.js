@@ -1,9 +1,8 @@
 import React, {useEffect, useRef, useContext} from "react";
 import {NavigationContext} from "../../context/context";
 import { useInView } from 'react-intersection-observer';
-import picture from "../images/my-picture.png";
-import cv from "../images/Myroslava Skala.pdf";
-import Cursor from "../cursor/Cursor";
+import picture from "../../images/my-photo.jpg";
+import cv from "../../images/Myroslava Skala.pdf";
 import { TimelineMax, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -41,7 +40,7 @@ const AboutMe = () => {
                 <div className="about--info">
                     <h2 className="about--title">About me</h2>
                     <p className="about--info--text">My name is Myroslava Skala and I'm a musician who finds passion in <strong>programming</strong>.</p>
-                    <p className="about--info--text">In programming fascinates me the ability to create something fruitful out of just a
+                    <p className="about--info--text">What fascinates me in programming is the ability to create something fruitful out of just a
                         simple text editor and a compiler.
                     </p>
                     <p className="about--info--text">I've successfully finished the course JavaScript: React and got a certificate. Currently, I'm improving my skills in

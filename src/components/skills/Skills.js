@@ -1,9 +1,9 @@
 import React, {useContext, useEffect, useRef} from "react";
 import {NavigationContext} from "../../context/context";
 import { useInView } from 'react-intersection-observer';
-import skills from "../images/skills3.png";
-import api from "../images/api.png";
-import firebase from "../images/firebase.png";
+import skills from "../../images/skills3.png";
+import api from "../../images/api.png";
+import firebase from "../../images/firebase.png";
 import { TimelineMax, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
