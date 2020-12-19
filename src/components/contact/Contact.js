@@ -12,6 +12,7 @@ const Contact = () => {
 
     const { ref, inView } = useInView({
         threshold: 0,
+        rootMargin: "-150px",
     });
 
     useEffect(() => {inView && activeContact.setActiveRoute("Contact")}, [inView]);

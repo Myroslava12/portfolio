@@ -112,6 +112,7 @@
 @media #{$mobileScreen}, #{$mobileLargeScreen}, #{$tableScreen} {
     .main--nav {
         z-index: 3;
+        height: auto;
     }
 
     .nav--menu {

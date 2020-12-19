@@ -15,6 +15,7 @@ const Skills = () => {
 
     const { ref, inView } = useInView({
         threshold: 0,
+        rootMargin: "-150px",
     });
 
     useEffect(() => {inView && activeSkills.setActiveRoute("Skills")}, [inView]);

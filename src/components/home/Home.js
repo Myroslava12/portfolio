@@ -9,6 +9,7 @@ const Home = () => {
     const activeHome = useContext(NavigationContext);
     const { ref, inView } = useInView({
         threshold: 0,
+        rootMargin: "-150px",
     });
 
     useEffect(() => {inView && activeHome.setActiveRoute("Home")}, [inView]);

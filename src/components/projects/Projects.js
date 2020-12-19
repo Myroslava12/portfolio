@@ -13,6 +13,7 @@ const Projects = () => {
 
     const { ref, inView } = useInView({
         threshold: 0,
+        rootMargin: "-150px",
     });
 
     useEffect(() => {inView && activeProjects.setActiveRoute("Projects")}, [inView]);
@@ -23,7 +24,7 @@ const Projects = () => {
                 <h2 className="about--title">My Projects</h2>
                 <div className="projects--box">
                     <div className="projects--info">
-                        <h3 className="projects--title">ClassicalApp</h3>
+                        <h3 className="projects--title">1.&nbsp;&nbsp;ClassicalApp</h3>
                         <div className="project--card">
                             <FrontCard img={classical} style="classical--img" />
                             <div className="project--back">
@@ -46,7 +47,7 @@ const Projects = () => {
 
                 <div className="projects--box">
                     <div className="projects--info">
-                        <h3 className="projects--title">Foundation Project</h3>
+                        <h3 className="projects--title">2.&nbsp;&nbsp;Foundation Project</h3>
                         <div className="project--card">
                             <FrontCard img={foundation} style="foundation--img" />
                             <div className="project--back">
