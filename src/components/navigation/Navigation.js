@@ -9,7 +9,13 @@ export const Navigation = () => {
     return (
         <nav className="main--nav">
                 <div className="nav--logo">
-                    <a href="/">mi.skala</a>
+                <Link 
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                >
+                    mi.skala
+                </Link>
                 </div>
                 <ul className="nav--menu">
                     <li>
