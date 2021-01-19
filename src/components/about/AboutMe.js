@@ -12,6 +12,7 @@ export const AboutMe = () => {
     const activeAboutMe = useContext(NavigationContext);
     const about = useRef();
     const tl = new TimelineMax();
+    const mq = window.matchMedia( "(min-width: 1024px)" );
 
     const { ref, inView } = useInView({
         threshold: 0,
@@ -19,12 +20,12 @@ export const AboutMe = () => {
     });
     
     useEffect(() => {
-        const animate = tl.staggerFromTo(about.current.children, 1, {
+        const animate = tl.staggerFromTo(about.current, 1, {
             transform: "scale(0)",
         }, {
             transform: "scale(1)"
         }, .2);
-        ScrollTrigger.create({
+        mq.matches && ScrollTrigger.create({
             animation: animate,
             trigger: about.current.children,
             start: "-350px center",
@@ -36,8 +37,8 @@ export const AboutMe = () => {
 
     return (
         <section className="section--about" id="about" ref={ref}>
-            <div className="app--container" ref={about}>
-                <div className="about--info">
+            <div className="app--container">
+                <div className="about--info" ref={about}>
                     <h2 className="about--title">About me</h2>
                     <p className="about--info--text">My name is Myroslava Skala and I'm a musician who finds passion in <strong>programming</strong>.</p>
                     <p className="about--info--text">What fascinates me in programming is the ability to create something fruitful out of just a

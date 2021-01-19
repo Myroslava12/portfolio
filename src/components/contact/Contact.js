@@ -9,6 +9,7 @@ export const Contact = () => {
     const contact = useRef();
     const tl = new TimelineMax();
     const activeContact = useContext(NavigationContext);
+    const mq = window.matchMedia( "(min-width: 1024px)" );
 
     const { ref, inView } = useInView({
         threshold: 0,
@@ -23,7 +24,7 @@ export const Contact = () => {
         }, {
             transform: "scale(1)",
         }, .2);
-        ScrollTrigger.create({
+        mq.matches && ScrollTrigger.create({
             animation: animate,
             trigger: contact.current.children,
             toggleActions: 'play none none none'
@@ -40,11 +41,21 @@ export const Contact = () => {
                         <a className="contact--link--maile" href="mailto:myroslavaskala@gmail.com">myroslavaskala@gmail.com</a>
                     </div>
                     <div className="media--box" ref={contact}>
-                        <a className="contact--link" href="https://github.com/Myroslava12" target="_blank"><i className="fab fa-github"></i></a>
-                        <a className="contact--link" href="https://www.linkedin.com/in/myroslava-skala-342b21196/" target="_blank"><i className="fab fa-linkedin-in"></i></a>
-                        <a className="contact--link" href="https://www.facebook.com/myroslava.skala" target="_blank"><i className="fab fa-facebook"></i></a>
-                        <a className="contact--link" href="https://www.instagram.com/skala_mira/" target="_blank"><i className="fab fa-instagram"></i></a>
-                        <a className="contact--link" href="https://web.telegram.org/#/im" target="_blank"><i className="fab fa-telegram"></i></a>
+                        <a className="contact--link" href="https://github.com/Myroslava12" target="_blank">
+                            <i className="fab fa-github"></i>
+                        </a>
+                        <a className="contact--link" href="https://www.link edin.com/in/myroslava-skala-342b21196/" target="_blank">
+                            <i className="fab fa-linkedin"></i>
+                        </a>
+                        <a className="contact--link" href="https://www.facebook.com/myroslava.skala" target="_blank">
+                            <i className="fab fa-facebook"></i>
+                        </a>
+                        <a className="contact--link" href="https://www.instagram.com/skala_mira/" target="_blank">
+                            <i className="fab fa-instagram"></i>
+                        </a>
+                        <a className="contact--link" href="https://web.telegram.org/#/im" target="_blank">
+                            <i className="fab fa-telegram"></i>
+                            </a>
                     </div>
                 </div>
                 <p className="contact--copyright">&copy; 2020 Myroslava Skala</p>
