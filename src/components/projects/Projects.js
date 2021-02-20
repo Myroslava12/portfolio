@@ -7,7 +7,8 @@ import { Technologies } from "./Technologies";
 import { FrontCard } from "./FrontCard";
 
 const techProject1 = ["React", "SASS", "Webpack", "npm", "YouTube API", "Open Opus API"];
-const techProject2 = ["React", "SASS", "Webpack", "npm", "Firebase", "Firestore"];
+const techProject2 = ["Redux", "axios", "React", "SASS", "Redux-saga", "GitHub API"];
+const techProject3 = ["React", "SASS", "Webpack", "npm", "Firebase", "Firestore"];
 
 export const Projects = () => {
     const activeProjects = useContext(NavigationContext);
@@ -48,7 +49,30 @@ export const Projects = () => {
 
                 <article className="projects--box">
                     <div className="projects--info">
-                        <h3 className="projects--title">2.&nbsp;&nbsp;Foundation Project</h3>
+                        <h3 className="projects--title">2.&nbsp;&nbsp; GitHub Users</h3>
+                        <div className="project--card">
+                            <FrontCard img={foundation} style="foundation--img" />
+                            <div className="project--back">
+                                <h3 className="project--card--title">GitHub Users</h3>
+                                <p className="project--card--text">
+                                    Simple web application displayed a list of GitHub users. Fetched users from GitHub API
+                                </p>
+                                <div className="project--link--box">
+                                    <a href="https://github.com/Myroslava12/github-users" target="_blank" className="project--link about--link">
+                                        GitHub
+                                        <i className="fab fa-github"></i>
+                                    </a>
+                                    <a className="project--link about--link" href="https://github--users.herokuapp.com/" target="_blank">Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <Technologies array={techProject2} />
+                </article>
+
+                <article className="projects--box">
+                    <div className="projects--info">
+                        <h3 className="projects--title">3.&nbsp;&nbsp;Foundation Project</h3>
                         <div className="project--card">
                             <FrontCard img={foundation} style="foundation--img" />
                             <div className="project--back">
@@ -65,7 +89,7 @@ export const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <Technologies array={techProject2} />
+                    <Technologies array={techProject3} />
                 </article>
             </div>
         </section>

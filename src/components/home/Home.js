@@ -27,11 +27,11 @@ export const Home = () => {
 
     return (
         <div className="canvas--box" id="home" ref={ref}>
-            <Canvas className="canvas" camera={{fov: 50,  position: [0, 0, 30] }}>
+            {/* <Canvas className="canvas" camera={{fov: 50,  position: [0, 0, 30] }}>
                 <directionalLight color="#ffffff" intensity={.8} position={[-1, 2, 4]} />
                 <pointLight position={[-10, 0, 0]} intensity={0.1} />
                 {geometries}
-            </Canvas>
+            </Canvas> */}
             <Header />
         </div>
     )
